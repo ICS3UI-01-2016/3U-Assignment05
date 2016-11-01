@@ -56,7 +56,19 @@ public class Translator {
                             || (word.charAt(i) == 'o')
                             || (word.charAt(i) == 'u')
                             || (word.charAt(i) == 'y')) {
+
+                        // create the strings for before and after the vowel
+                        String beforevowel = word.substring(0, i);
+                        String aftervowel = word.substring(i + 1);
+
+                        aftervowel = ("i" + aftervowel + beforevowel + "ee");
+
+                        // output the final sentance
+                        System.out.println(word + " in Mattenenglisch is " + aftervowel);
+                        break;
+                    }
+                }
             }
         }
     }
-        }
+}
