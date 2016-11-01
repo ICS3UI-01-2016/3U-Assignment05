@@ -1,4 +1,6 @@
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import java.util.Scanner;
 
 /*
@@ -22,12 +24,15 @@ public class Translator {
         //Ask the user for a word to translate
         System.out.println("Please enter a word to translate(Type END to quit the program)");
         String word = input.nextLine();
-        if(!word.startsWith("a")||!word.startsWith("e")||!word.startsWith("i")||!word.startsWith("o")||!word.startsWith("u")){
-            int firstA = word.indexOf("a");
-            int firstE = word.indexOf("e");
-            int firstI = word.indexOf("i");
-            int firstO = word.indexOf("o");
-            int firstU = word.indexOf("u");
+        Pattern p = Pattern.compile("(a|e|i|o|u)");
+        word.
+        int some = word.
+        System.out.println(some);
+        if(Pattern.matches(p.toString(), word)){
+            System.out.println("Yes");
+        }
+        else{
+            System.out.println("No");
         }
     }
 }
