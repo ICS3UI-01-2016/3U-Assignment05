@@ -33,7 +33,7 @@ public class Translator {
                     || word.startsWith("u")) {
                 String latinvowel = word.replace("" + word.charAt(0), "i");
 
-                // make a statement if ENDS with a vowel
+                // make a statement if a word ENDS with a vowel
                 if (word.endsWith("a")
                         || word.endsWith("e")
                         || word.endsWith("i")
