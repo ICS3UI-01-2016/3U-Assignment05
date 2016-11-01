@@ -41,10 +41,22 @@ public class Translator {
                         || word.endsWith("u")
                         || word.endsWith("y")) {
                     latinvowel = latinvowel + "hee";
-
-                    }
+                } else {
+                    latinvowel = latinvowel + "ee";
                 }
+                System.out.println(word + " in Mattenenglisch is " + latinvowel);
+
+                // create loop to count up to the first vowel in the word
+            } else {
+                int length = word.length();
+                for (int i = 0; i < length; i++) {
+                    if ((word.charAt(i) == 'a')
+                            || (word.charAt(i) == 'e')
+                            || (word.charAt(i) == 'i')
+                            || (word.charAt(i) == 'o')
+                            || (word.charAt(i) == 'u')
+                            || (word.charAt(i) == 'y')) {
             }
         }
     }
-
+        }
