@@ -61,7 +61,7 @@ public class Translator {
                         // create the strings for before and after the vowel
                         String beforevowel = word.substring(0, i);
                         String aftervowel = word.substring(i + 1);
-                        
+
                         // output the word with "i" in the begginging of the word and "ee" at the end of the word
                         aftervowel = ("i" + aftervowel + beforevowel + "ee");
 
