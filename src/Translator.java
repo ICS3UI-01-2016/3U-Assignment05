@@ -18,7 +18,7 @@ public class Translator {
         // create the input for the user
         Scanner in = new Scanner(System.in);
 
-        // make a string for the word
+        // make string for the word
         String word = "";
 
         // make a while loop to ask for words to translate
@@ -39,8 +39,7 @@ public class Translator {
                         || word.endsWith("e")
                         || word.endsWith("i")
                         || word.endsWith("o")
-                        || word.endsWith("u")
-                        || word.endsWith("y")) {
+                        || word.endsWith("u")) {
                     latinvowel = latinvowel + "hee";
                 } else {
                     latinvowel = latinvowel + "ee";
