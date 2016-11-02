@@ -31,6 +31,7 @@ public class Translator {
                     || word.startsWith("i")
                     || word.startsWith("o")
                     || word.startsWith("u")) {
+                // replace the first(0) letter to an "i"
                 String latinvowel = word.replace("" + word.charAt(0), "i");
 
                 // make a statement if a word ENDS with a vowel
@@ -60,10 +61,11 @@ public class Translator {
                         // create the strings for before and after the vowel
                         String beforevowel = word.substring(0, i);
                         String aftervowel = word.substring(i + 1);
-
+                        
+                        // output the word with "i" in the begginging of the word and "ee" at the end of the word
                         aftervowel = ("i" + aftervowel + beforevowel + "ee");
 
-                        // output the final sentance
+                        // output the final sentence
                         System.out.println(word + " in Mattenenglisch is " + aftervowel);
                         break;
                     }
