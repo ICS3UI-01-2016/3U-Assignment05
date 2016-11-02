@@ -7,7 +7,6 @@ import java.util.Scanner;
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author fitaa8228
@@ -23,16 +22,28 @@ public class Translator {
         Scanner input = new Scanner(System.in);
         //Ask the user for a word to translate
         System.out.println("Please enter a word to translate(Type END to quit the program)");
+        //Accept word to translate
         String word = input.nextLine();
-        Pattern p = Pattern.compile("(a|e|i|o|u)");
-        word.
-        int some = word.
-        System.out.println(some);
-        if(Pattern.matches(p.toString(), word)){
-            System.out.println("Yes");
+        //change the first vowel to ~
+        String vowelCheck = word.toLowerCase().replaceAll("[aeiou]", "~");
+        //find where the ~ is
+        int idk = vowelCheck.indexOf("~");
+        //Split up the word where the ~ would be in the original word
+        String end = word.substring(idk);
+        //Ch
+        end = end.replaceFirst("[aeiou]", "i");
+        String begin = word.substring(0, idk);
+        //Check to see if the original word started and ended with a vowel
+        if (vowelCheck.endsWith("~")&&vowelCheck.startsWith("~")) {
+            begin = begin + "hee";
+        } else {
+            begin = begin + "ee";
         }
-        else{
-            System.out.println("No");
-        }
+        String finished = end + begin;
+        System.out.println(vowelCheck);
+        System.out.println(idk);
+        System.out.println(end);
+        System.out.println(begin);
+        System.out.println(finished);
     }
 }
