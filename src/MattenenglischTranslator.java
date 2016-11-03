@@ -78,7 +78,7 @@ public class MattenenglischTranslator {
                 String ending2 = beginning+"ee";
                 
                 // output the final translation to the user
-                System.out.println(word + "in Mattenenglisch is " + ending2);
+                System.out.println(word + " in Mattenenglisch is " + ending2);
                 
                 
 
