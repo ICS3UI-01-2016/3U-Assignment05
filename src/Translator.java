@@ -54,8 +54,7 @@ public class Translator {
                             || (word.charAt(i) == 'e')
                             || (word.charAt(i) == 'i')
                             || (word.charAt(i) == 'o')
-                            || (word.charAt(i) == 'u')
-                            || (word.charAt(i) == 'y')) {
+                            || (word.charAt(i) == 'u')) {
 
                         // create the strings for before and after the vowel
                         String beforevowel = word.substring(0, i);
