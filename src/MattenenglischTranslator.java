@@ -94,26 +94,7 @@ public class MattenenglischTranslator {
                     // output the final translation to the user
                     System.out.println(word + " in Mattenenglisch is " + ending2);
                 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             }
-
         }
     }
 }
