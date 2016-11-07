@@ -30,7 +30,8 @@ public class Translator {
                     || word.startsWith("e")
                     || word.startsWith("i")
                     || word.startsWith("o")
-                    || word.startsWith("u")) {
+                    || word.startsWith("u")
+                    || word.startsWith("y")) {
                 // replace the first(0) letter to an "i"
                 String latinvowel = word.replace("" + word.charAt(0), "i");
 
@@ -39,7 +40,8 @@ public class Translator {
                         || word.endsWith("e")
                         || word.endsWith("i")
                         || word.endsWith("o")
-                        || word.endsWith("u")) {
+                        || word.endsWith("u")
+                        || word.startsWith("y")) {
                     latinvowel = latinvowel + "hee";
                 } else {
                     latinvowel = latinvowel + "ee";
@@ -54,7 +56,8 @@ public class Translator {
                             || (word.charAt(i) == 'e')
                             || (word.charAt(i) == 'i')
                             || (word.charAt(i) == 'o')
-                            || (word.charAt(i) == 'u')) {
+                            || (word.charAt(i) == 'u')
+                            || (word.charAt(i) == 'y')) {
 
                         // create the strings for before and after the vowel
                         String beforevowel = word.substring(0, i);
