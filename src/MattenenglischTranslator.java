@@ -24,6 +24,7 @@ public class MattenenglischTranslator {
             System.out.println("Please enter a word to translate(Type END to quit the program): ");
             // scan in a word
             word = input.nextLine();
+            // if they press end then break the program
             if (word.equalsIgnoreCase("END")) {
                 break;
             }
@@ -69,8 +70,9 @@ public class MattenenglischTranslator {
 
                 // break the word down and take everything after the first vowel after the first vowel
                 String ending = word.substring(firstVowel + 1);
-                // add i to the beggining of the word
+                // move all the letters after the vowels to the front
                 String beginning1 = ending + word.substring(0, firstVowel);
+                // add i to the beggining of the word
                 String beginning = "i" + beginning1;
                 // add ee to the end of the word 
                 String ending2 = beginning + "ee";
