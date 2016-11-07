@@ -32,7 +32,7 @@ public class Strings {
         
         // Find the first l
         int lPosition = changeWord.indexOf("l");
-        
+
         if (lPosition != -1){
             // Breaking the String apart
             // Starts at the beginning, goes UP TO the L

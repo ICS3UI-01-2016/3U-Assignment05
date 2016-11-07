@@ -20,6 +20,7 @@ public class Q1 {
         // Create scanner for user input
         Scanner input = new Scanner(System.in);
 
+        
         // Ask user for a word to translate
         System.out.println("Enter a word to translate (END to quit program):");
         
@@ -34,11 +35,11 @@ public class Q1 {
         String changeWord = engWord;
         
         // Does word contain "y"?
-            // If starts with y
-            // If second letter in two letter word
-            // If y at end of consonant cluster 
-            // Y at the end of the word is a vowel
+            // If starts with y, consonant
+            // else if vowel
+        
         // Does word begin with consonant sound?
+        
             // Move all consonants up to first vowel (a, e, i, o, u, sometimes y)
             // Add suffix -ee
             // Change first vowel to i
