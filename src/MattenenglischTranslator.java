@@ -20,7 +20,7 @@ public class MattenenglischTranslator {
         while (true) {
             Scanner input = new Scanner(System.in);
             //asking user for word to translate
-            System.out.println("Please enter the word you are translatting");
+            System.out.println("Please enter the word you are translatting(Type END to terminate the program)");
             String word = input.nextLine();
             // if the user types end it kills the program
             if (word.equals("END")) {
