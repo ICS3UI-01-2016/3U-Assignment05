@@ -20,11 +20,11 @@ public class test {
         int number;
         
         Scanner input = new Scanner(System.in);
-        System.out.println("Input an integer:");
+        
         
         while ((number = input.nextInt()) !=0){
-            System.out.println("You entered" + number);
-            System.out.println("Input an integer");
+            System.out.println("Input an integer:");
+            System.out.println("You entered " + number);
         }
         
         System.out.println("Out of loop");
