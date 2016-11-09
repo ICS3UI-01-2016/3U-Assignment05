@@ -24,11 +24,33 @@ public class Q1 {
         
         // Create string for user's word
         String engWord = input.nextLine();
-
-        https://docs.oracle.com/javase/tutorial/java/nutsandbolts/arrays.html
+        
+        // Identify characters that are vowels
+        char vowel = 'a';
         
         // User has input a word, translate it
         while(!engWord.equals("END")){
-        }  
+            
+            // Set all characters to lower case
+            engWord.toLowerCase();
+            
+            // Does word contain y
+      
+                // if y at beginning, a consonant
+            
+                // else not at beginning, a vowel
+            
+            // Does word start with vowel
+            
+                // change first vowel to 'i'
+            
+            // Word starts with consonant
+            
+            // Word ends in vowel
+            
+            // Word ends in consonant
+            
+            https://docs.oracle.com/javase/tutorial/java/data/manipstrings.html
+        }
     }
 }
