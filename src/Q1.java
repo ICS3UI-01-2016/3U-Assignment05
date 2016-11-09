@@ -32,7 +32,7 @@ public class Q1 {
         while(!engWord.equals("END")){
             
             // Set all characters to lower case
-            engWord.toLowerCase();
+            String changeWord = engWord.toLowerCase();
             
             // Does word contain y
       
