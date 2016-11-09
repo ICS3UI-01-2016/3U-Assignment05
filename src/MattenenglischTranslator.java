@@ -21,6 +21,7 @@ public class MattenenglischTranslator {
         String word = "";
         // make the program loop until they press end
         while (!word.equalsIgnoreCase("END")) {
+            // ask the user to enter the word they wish to translate
             System.out.println("Please enter a word to translate(Type END to quit the program): ");
             // scan in a word
             word = input.nextLine();
