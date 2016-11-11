@@ -53,7 +53,7 @@ public class Assignment5 {
            if ((ch == 'y') && term.startsWith("y")){
             String first =  term.substring(0 , 1);
             String last = term.substring(i + 2);
-            changeword = "i" + first + last + "ee";
+            changeword = "i" + last + first + "ee";
             break;
            }
            // if y comes at the end of a consonant letter
