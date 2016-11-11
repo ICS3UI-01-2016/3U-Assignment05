@@ -20,8 +20,10 @@ public class test {
         int number;
         
         Scanner input = new Scanner(System.in);
+        String test = "this works";
+        System.out.println(test);
         
-        
+                
         while ((number = input.nextInt()) !=0){
             System.out.println("Input an integer:");
             System.out.println("You entered " + number);
