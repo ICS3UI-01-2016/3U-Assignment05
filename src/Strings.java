@@ -55,7 +55,7 @@ public class Strings {
         for (int i = 0; i < length; i++){
             // Look at the character
             // Is the character an L
-            if (word.charAt (i) == 'l'){
+            if (word.charAt(i) == 'l'){
                 // or count + 1
                 // count it!
                 count++;
