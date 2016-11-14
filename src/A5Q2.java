@@ -31,7 +31,7 @@ public class A5Q2 {
 
             // get the length of the word
             int length = word.length();
-            
+
             if (word.equals("end")) {
                 break;
             }
@@ -46,15 +46,15 @@ public class A5Q2 {
                 // if word ends with a vowel and the ending as "hee"
                 if (word.endsWith("a") || word.endsWith("e") || word.endsWith("i")
                         || word.endsWith("o") || word.endsWith("u") || word.endsWith("y")) {
-                    word = beginning + ending + "hee";    
+                    word = beginning + ending + "hee";
                 } else {
                     // othwerwise if final letter is consonent let the ending of the word end as "ee"
                     word = beginning + ending + "ee";
                 }
                 // input the translated word
                 System.out.println("The translated word in Mattenänglisch is " + word);
-                
-  
+
+
             } else // when the word begins with a consonent
             if (!word.startsWith("a") || !word.startsWith("e") || !word.startsWith("i")
                     || !word.startsWith("o") || !word.startsWith("u")) {
@@ -65,20 +65,20 @@ public class A5Q2 {
                     // look at the character
                     if (word.charAt(i) == ('a') || word.charAt(i) == ('e')
                             || word.charAt(i) == ('i') || word.charAt(i) == ('o')
-                            || word.charAt(i) == ('u') || word.charAt(i) == ('y')){
+                            || word.charAt(i) == ('u') || word.charAt(i) == ('y')) {
                         // divide the word up into chunks
                         // all the consenents up to the first vowel
                         String begin = word.substring(0, i);
                         // the first vowel itself and the rest of the word
                         String middle = word.substring(i);
                         // divide into two chunks from the first vowel to the rest of the word
-                        String firstmiddle = middle.substring(0, 1);
+                        String firstMiddle = middle.substring(0, 1);
                         // change first vowel into "i"
-                        firstmiddle = "i";
+                        firstMiddle = "i";
                         // rest of the word
-                        String secondmiddle = middle.substring(1);
+                        String secondMiddle = middle.substring(1);
                         // resassemble word
-                        word = firstmiddle + secondmiddle + begin + "ee";
+                        word = firstMiddle + secondMiddle + begin + "ee";
                         // output translated word
                         System.out.println("The translated word in Mattenänglisch is " + word);
                         // break from the loop
