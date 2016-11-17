@@ -34,11 +34,8 @@ public class Q1 {
             // Get the length of changeWord
             int wordLength = changeWord.length();
 
-            // Cycle through each character in changeWord to find the first vowel
+            // Cycle through each character to find the first vowel
             for (int firstVowel = 0; firstVowel < wordLength; firstVowel++) {
-
-                // Create shortcut for finding the first vowel
-                char findFirstVowel = changeWord.charAt(firstVowel);
 
                 // Variable for first half of word before firstVowel
                 String firstHalf = changeWord.substring(0, firstVowel);
@@ -46,31 +43,30 @@ public class Q1 {
                 // Variable for second half of word after firstVowel
                 String secondHalf = changeWord.substring(2);
 
+                // Create shortcut for finding the first vowel (fV)
+                char fV = changeWord.charAt(firstVowel);
+
                 // If word starts with y, find first vowel 
-                if (changeWord.startsWith("y") && (findFirstVowel == 'a' || findFirstVowel == 'e' || findFirstVowel == 'i' || findFirstVowel == 'o' || findFirstVowel == 'u')) {
-                    // Put word back together: i (firstVowel) is replaced with
+                if (changeWord.startsWith("y") && (fV == 'a' || fV == 'e' || fV == 'i' || fV == 'o' || fV == 'u')) {
+                    // Put word back together
                     changeWord = "i" + secondHalf + firstHalf + "ee";
                     // Changes are complete; end this loop
                     break;
                 }
-                // more stuff here
+
+                // Output the translation to user
+                System.out.println(engWord + " in Mattenenglisch is " + changeWord);
+                // End loop
+                break;
             }
-
-
-            // Output the translation to user
-            System.out.println(engWord + " in Mattenenglisch is " + changeWord);
-            
-            // End loop
-            break;
-        }
-        // User has ended the program
-        if (engWord.equals("END")) {
-            // No action; program ends
+            // User has ended the program
+            if (engWord.equals("END")) {
+                // No action; program ends
+            }
         }
     }
 }
 // Does word start with vowel
-// change first vowel to 'i'
-// Word starts with consonant
+// Word starts with consonant or y
 // Word ends in vowel
 // Word ends in consonant
