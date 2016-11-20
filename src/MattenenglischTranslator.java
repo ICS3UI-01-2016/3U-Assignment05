@@ -36,6 +36,11 @@ public class MattenenglischTranslator extends javax.swing.JFrame {
         jLabel1.setText("Original Word:");
 
         jButton1.setText("Transform Word");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -86,6 +91,44 @@ public class MattenenglischTranslator extends javax.swing.JFrame {
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        //create variables
+        String in= ""; 
+        String out= "";
+        int firstvowel = 0;
+        int pos= 0;
+        int pos2= 0;
+        //convert string to lowercase
+        in = in.toLowerCase();
+        
+        //find first vowel in original word
+        pos2= in.indexOf("a");
+        if(pos2==-1 || in.indexOf("e")<pos2){
+            pos2= in.indexOf("e");
+        }
+       
+        
+        //If the original word starts with a consonnant
+        if(firstvowel !=0){
+            //int start = in(0,firstvowel-1);
+            //int
+        }else//original word starts with a vowel
+        {
+            
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
