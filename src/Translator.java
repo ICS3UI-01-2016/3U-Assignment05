@@ -39,17 +39,31 @@ public class Translator {
                 char fV = newWord.charAt(x);
 
                 // Part of word before first vowel
+                String firstHalf = newWord.substring(0, x);
 
                 // Part of word after first vowel
+                String secondHalf = newWord.substring(x + 1);
 
-                // If word starts with y
+                // If word starts with y, find first vowel
+                if (newWord.startsWith("y") && (fV == 'a' || fV == 'e' || fV == 'i' || fV == 'o' || fV == 'u')) {
+                    // Put word together
+                    newWord = "i" + secondHalf + firstHalf + "ee";
+                }
+                
+                // For vowel and consonant starting words, find first vowel
+                if (fV == 'a' || fV == 'e' || fV == 'i' || fV == 'o' || fV == 'u' || fV == 'y') {
+                    // If word ends in a vowel
+                    // Put word together
 
-                // If word starts with vowel
-
-                // Else starts with consonant
+                    // If word ends in consonant
+                    // Put word together
+                    newWord = "i" + secondHalf + firstHalf + "ee";
+                }
             }
+            // Output translation to user
+            System.out.println(inWord + " in Mattenenglisch is " + newWord);
 
-            // User has ended the program
+        // User has ended the program
         } else {
             // Program ends
         }
