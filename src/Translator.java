@@ -23,20 +23,35 @@ public class Translator {
         // Store user's word
         String inWord = input.nextLine();
 
-        // Translate user's word while they have not ended the program
-        if (!inWord.equals("END")){
-           
-            // Store word in new string with all characters in lower case
-           String newWord = inWord.toLowerCase();
-           
-           // Get the length of word
-           int wordLength = newWord.length();
-           
-           
-           
-        // User has ended the program
-        }else{
-            
+        // Translate word while program has not been ended
+        if (!inWord.equals("END")) {
+
+            // Create new string with all characters in lower case
+            String newWord = inWord.toLowerCase();
+
+            // Get length of word
+            int wordLength = newWord.length();
+
+            // Loop to check each character
+            for (int x = 0; x < (wordLength + 1); x++) {
+
+                // Shortcut to find first vowel
+                char fV = newWord.charAt(x);
+
+                // Part of word before first vowel
+
+                // Part of word after first vowel
+
+                // If word starts with y
+
+                // If word starts with vowel
+
+                // Else starts with consonant
+            }
+
+            // User has ended the program
+        } else {
+            // Program ends
         }
     }
 }
