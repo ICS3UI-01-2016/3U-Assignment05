@@ -99,6 +99,7 @@ public class MattenenglischTranslator extends javax.swing.JFrame {
         int firstvowel = 0;
         int pos= 0;
         int pos2= 0;
+        //int pos3=0;
         //convert string to lowercase
         in = in.toLowerCase();
         
@@ -106,19 +107,26 @@ public class MattenenglischTranslator extends javax.swing.JFrame {
         pos2= in.indexOf("a");
         if(pos2==-1 || in.indexOf("e")<pos2){
             pos2= in.indexOf("e");
+            //else(pos3==-1|| in.indexOf("o")<pos3){
+            //pos3= in.indexOf("o");
+        //else(pos4==-1|| in.indexOf("u"}<pos4){
+            //pos4= in.indexOf("u")
         }
        
         
         //If the original word starts with a consonnant
         if(firstvowel !=0){
             //int start = in(0,firstvowel-1);
-            //int
+            //int new = 
         }else//original word starts with a vowel
         {
             
         }
+        //make word start with "i"
+        //Make word end with (add on) "ee"
         
         
+        //Y exception
         
         
         
