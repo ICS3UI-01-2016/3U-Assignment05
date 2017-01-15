@@ -93,17 +93,36 @@ public class MattenenglischTranslator extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        
-        //add stuff
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
+        //create variables
+        String in = "";
+        String out = "";
+        int fv = 0;
+        //get user's input
+        in = this.jTextField1.getText();
+//convert string to lowercase
+        in = in.toLowerCase();
+        boolean sc = true;
+
+//calling method
+        sc = startC(in);
+        if (sc == true) {//word starts with a consonant
+//variable first vowel+calling method
+            fv = firstVowel(in);
+//get transformed word
+            out = translateC(in, fv);
+
+        } else {//starts w/vowel
+//does the word end in a vowel?
+//end vowel= ev
+            boolean ev = true;
+            ev = endsInVowel(in);
+//get transformed word
+            out = translateV(in, ev);
+        }
+//put transformed word into output textbox
+        jTextField2.setText(out);
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -148,112 +167,106 @@ public class MattenenglischTranslator extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables
 
- //METHODS
+    //METHODS
 //assumes every word contains at least 1 vowel
-
-    
     //method: startC -determines whether first letter=consonant
-
-public boolean startC(String in){
-boolean sc=true;
+    public boolean startC(String in) {
+        boolean sc = true;
 //first letter variable
-String fl = "";
-fl = in.substring(0,1);
-if(fl.equals("a")||fl.equals("e")||fl.equals("i")||fl.equals("o")||fl.equals("u")){
-sc=false;
-}
-return sc;
-}
+        String fl = "";
+        fl = in.substring(0, 1);
+        if (fl.equals("a") || fl.equals("e") || fl.equals("i") || fl.equals("o") || fl.equals("u")) {
+            sc = false;
+        }
+        return sc;
+    }
 
 //method: firstVowel -to find positioning of the first vowel
-
-public int firstVowel(String in){
+    public int firstVowel(String in) {
 //initialize variable first vowel
-int fv=1000;
+        int fv = 1000;
 //initialize variable temporary vowel
-int tv=-1;
-tv= in.indexOf("a");
+        int tv = -1;
+        tv = in.indexOf("a");
 //if it has found it’s lowest #
-if(tv!=-1&&tv<fv){
-fv=tv;
-}
-tv= in.indexOf("e");
+        if (tv != -1 && tv < fv) {
+            fv = tv;
+        }
+        tv = in.indexOf("e");
 //if it has found it’s lowest #
-if(tv!=-1&&tv<fv){
-fv=tv;
-}
-tv= in.indexOf("i");
+        if (tv != -1 && tv < fv) {
+            fv = tv;
+        }
+        tv = in.indexOf("i");
 //if it has found it’s lowest #
-if(tv!=-1&&tv<fv){
-fv=tv;
-}
-tv= in.indexOf("o");
+        if (tv != -1 && tv < fv) {
+            fv = tv;
+        }
+        tv = in.indexOf("o");
 //if it has found it’s lowest #
-if(tv!=-1&&tv<fv){
-fv=tv;
-}
-tv= in.indexOf("u");
+        if (tv != -1 && tv < fv) {
+            fv = tv;
+        }
+        tv = in.indexOf("u");
 //if it has found it’s lowest #
-if(tv!=-1&&tv<fv){
-fv=tv;
-}
-tv= in.indexOf("y");
+        if (tv != -1 && tv < fv) {
+            fv = tv;
+        }
+        tv = in.indexOf("y");
 //if it has found it’s lowest #
-if(tv!=-1&&tv<fv){
-fv=tv;
-}
-if(fv==1000){
-fv=-1;}
-return fv;
-}
+        if (tv != -1 && tv < fv) {
+            fv = tv;
+        }
+        if (fv == 1000) {
+            fv = -1;
+        }
+        return fv;
+    }
 
 //method: translateC -add transformations to original word
-public String translateC(String in,int fv){
+    public String translateC(String in, int fv) {
 //define return variable
-String out="";
+        String out = "";
 //variable for before vowel
-String bv="";
+        String bv = "";
 //variable for after vowel
-String av="";
-bv= in.substring (0,fv);
-av= in.substring(fv+1, in.length());
-out="i"+av+bv+"ee";
-return out;
-}
+        String av = "";
+        bv = in.substring(0, fv);
+        av = in.substring(fv + 1, in.length());
+        out = "i" + av + bv + "ee";
+        return out;
+    }
 
 //method:endsInVowel- determines whether last character of string is a vowel
-public boolean endsInVowel(String in){
+    public boolean endsInVowel(String in) {
 //initialize returning variable
-boolean ev= false;
+        boolean ev = false;
 //create variable for last character
-String lc="";
-lc=in.substring(in.length()-1,in.length());
-if(lc.equals("a")||lc.equals("e")||lc.equals("i")||lc.equals("o")||lc.equals("u")){
-ev=true;
-}
-return ev;
-}
+        String lc = "";
+        lc = in.substring(in.length() - 1, in.length());
+        if (lc.equals("a") || lc.equals("e") || lc.equals("i") || lc.equals("o") || lc.equals("u")) {
+            ev = true;
+        }
+        return ev;
+    }
 
 //method:translateV -add transformations to original word
-
-public String translateV(String in, boolean ev){
-    //define return variable
-String out="";
+    public String translateV(String in, boolean ev) {
+        //define return variable
+        String out = "";
 
 //variable for after vowel
-String av="";
+        String av = "";
 //get rest of word after first vowel(character0)
-av= in.substring(1, in.length());
+        av = in.substring(1, in.length());
 //make character 0 "i"
-out="i"+av;
+        out = "i" + av;
 //if the string ends with a vowel out will add "hee" to the end, if not just "ee"
-if(ev==true){
-    out= out+"h";
-}
-out= out+"ee";
-return out;
-}
-
-
+        if (ev == true) {
+            out = out + "h";
+        }
+        out = out + "ee";
+        return out;
+    }
 
 }
